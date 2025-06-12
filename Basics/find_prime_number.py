@@ -15,10 +15,14 @@ def is_prime(n):
     return True
 
 # Get user input
-user_input = int(input("Enter a number to check if it's prime: "))
+try:
+    user_input = int(input("Enter a number to check if it's prime: "))
+    
+    # Check and display result
+    if is_prime(user_input):
+        print(f"{user_input} is a prime number.")
+    else:
+        print(f"{user_input} is not a prime number.")
 
-# Check and display result
-if is_prime(user_input):
-    print(f"{user_input} is a prime number.")
-else:
-    print(f"{user_input} is not a prime number.")
+except Exception as e:
+    print(e)
